@@ -22,7 +22,7 @@
  </style>
 </head>
 <body>
-<h1>example.lzy.LazyNotSafeStress</h1>
+<h1>example.lzy.LazyDottyStyleStress</h1>
 <h3>Description and references</h3>
 <p>Simple test, checking AtomicInteger</p>
 <h3>Environment</h3>
@@ -125,52 +125,30 @@ Time: 1000</td>
 <th>Interpretation</th>
 </tr>
 <tr>
-<td align='center'>1, 1</td>
-<td align='right' width='5.0%' bgColor=#00ff00>15214960</td>
-<td align='right' width='5.0%' bgColor=#00ff00>12030760</td>
-<td align='right' width='5.0%' bgColor=#00ff00>25666490</td>
-<td align='right' width='5.0%' bgColor=#00ff00>44765360</td>
-<td align='right' width='5.0%' bgColor=#00ff00>5751980</td>
-<td align='right' width='5.0%' bgColor=#00ff00>743210</td>
+<td align='center'>42, 42</td>
+<td align='right' width='5.0%' bgColor=#c0c0c0>0</td>
+<td align='right' width='5.0%' bgColor=#00ff00>6297650</td>
+<td align='right' width='5.0%' bgColor=#00ff00>5272130</td>
+<td align='right' width='5.0%' bgColor=#00ff00>5527530</td>
+<td align='right' width='5.0%' bgColor=#00ff00>2849840</td>
+<td align='right' width='5.0%' bgColor=#00ff00>896620</td>
 <td>ACCEPTABLE</td>
 <td>Both actors came up with the same value.</td>
 </tr>
 <tr>
-<td align='center'>1, 2</td>
-<td align='right' width='5.0%' bgColor=#00ffff>30135860</td>
-<td align='right' width='5.0%' bgColor=#00ffff>37499890</td>
-<td align='right' width='5.0%' bgColor=#00ffff>17053250</td>
-<td align='right' width='5.0%' bgColor=#c0c0c0>0</td>
-<td align='right' width='5.0%' bgColor=#00ffff>6323480</td>
-<td align='right' width='5.0%' bgColor=#c0c0c0>0</td>
-<td>ACCEPTABLE_INTERESTING</td>
-<td>Bot actors executed the initialization code, while `i` changes were visible to them</td>
-</tr>
-<tr>
-<td align='center'>2, 1</td>
-<td align='right' width='5.0%' bgColor=#00ffff>10764470</td>
-<td align='right' width='5.0%' bgColor=#00ffff>12092210</td>
-<td align='right' width='5.0%' bgColor=#00ffff>16572340</td>
-<td align='right' width='5.0%' bgColor=#00ffff>6095140</td>
-<td align='right' width='5.0%' bgColor=#c0c0c0>0</td>
-<td align='right' width='5.0%' bgColor=#c0c0c0>0</td>
-<td>ACCEPTABLE_INTERESTING</td>
-<td>Bot actors executed the initialization code, while `i` changes were visible to them</td>
-</tr>
-<tr>
 <td></td>
-<td align='center' bgColor='green '>OK</td>
+<td align='center' bgColor='red '>ERROR</td>
 <td align='center' bgColor='green '>OK</td>
 <td align='center' bgColor='green '>OK</td>
 <td align='center' bgColor='green '>OK</td>
 <td align='center' bgColor='red '>ERROR</td>
-<td align='center' bgColor='red '>ERROR</td>
+<td align='center' bgColor='green '>OK</td>
 <td></td>
 <td></td>
 </tr>
 </table>
 <h3>Auxiliary data</h3>
-<p><b>JVM options: [-XX:TieredStopAtLevel=1]
+<p><b>JVM options: []
 Iterations: 5
 Time: 1000</b></p>
 <pre>
@@ -183,7 +161,7 @@ java.lang.IllegalStateException
 
 </pre>
 
-<p><b>JVM options: [-Xint]
+<p><b>JVM options: [-XX:TieredStopAtLevel=1]
 Iterations: 5
 Time: 1000</b></p>
 <pre>

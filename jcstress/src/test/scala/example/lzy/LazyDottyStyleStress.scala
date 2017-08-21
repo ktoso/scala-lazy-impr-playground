@@ -8,24 +8,19 @@ import org.openjdk.jcstress.infra.results.LL_Result
 @Description("Simple test, checking AtomicInteger")
 @Outcomes(Array(
     new Outcome(
-      id = Array("1, 1"), 
+      id = Array("42, 42"), 
       expect = Expect.ACCEPTABLE, 
       desc = "Both actors came up with the same value."),
     new Outcome(
-      id = Array("1, 2", "2, 1"), 
-      expect = Expect.ACCEPTABLE_INTERESTING, 
-      desc = "Bot actors executed the initialization code, while `i` changes were visible to them")
+      id = Array("42, 2"), 
+      expect = Expect.FORBIDDEN, 
+      desc = "actor1, then actor2.")
   )
 )
 @State
-class LazyNotSafeStress {
+class LazyDottyStyleStress {
 
-  var i: Int = 0
-  
-  val cell = new example.lzy.LazyNotSafeCell(() => {
-    i += 1
-    i.toString
-  })
+  val cell = new example.lzy.LazyDottyStyleCell
 
   @Actor
   def actor1(r: LL_Result): Unit = {
